@@ -1,0 +1,46 @@
+.new-task {
+    -fx-padding: 15px;
+}
+
+.new-task-title {
+    -fx-font-size: 24px;
+    -fx-padding: 20px 0;
+}
+
+.new-task-form-label {
+    -fx-font-size: 16px;
+}
+
+.new-task-form-button {
+    -fx-font-size: 16px;
+    -fx-padding: 3 30px;
+    -fx-text-fill: #fff;
+}
+
+.new-task-form-button:hover {
+    -fx-cursor: hand;
+}
+
+.cancel-button {
+    -fx-background-color: #ff3838;
+}
+
+.cancel-button:hover {
+    -fx-background-color: #cf2b2b;
+}
+
+.cancel-button:pressed {
+  -fx-background-color: #ac2525;
+}
+
+.save-button {
+    -fx-background-color: #02a102;
+}
+
+.save-button:hover {
+    -fx-background-color: #008a00;
+}
+
+.save-button:pressed {
+  -fx-background-color: #007400;
+}

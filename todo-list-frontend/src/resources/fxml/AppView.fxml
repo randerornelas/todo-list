@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+
+<BorderPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="controller.AppController"
+            styleClass="app">
+
+    <top>
+        <BorderPane styleClass="panel-top">
+            <left>
+                <Label text="Lista de Tarefas" styleClass="label-title"/>
+            </left>
+
+            <right>
+                <Button text="Nova Tarefa" styleClass="new-task-button" onAction="#openNewTask" />
+            </right>
+        </BorderPane>
+    </top>
+
+    <center>
+        <Pane>
+            <TableView fx:id="table" prefHeight="400" prefWidth="690">
+                <columnResizePolicy>
+                    <TableView fx:constant="CONSTRAINED_RESIZE_POLICY"/>
+                </columnResizePolicy>
+
+                <columns>
+                    <TableColumn fx:id="taskCol" text="Tarefa" minWidth="350" maxWidth="350" />
+                    <TableColumn fx:id="startDateCol" text="Data Início" minWidth="90" maxWidth="90" />
+                    <TableColumn fx:id="timeCol" text="Hora" minWidth="80" maxWidth="80" />
+                    <TableColumn fx:id="deadlineCol" text="Prazo Final" minWidth="90" maxWidth="90" />
+                    <TableColumn fx:id="actionsCol" text="Ações" />
+                </columns>
+            </TableView>
+        </Pane>
+    </center>
+
+</BorderPane>

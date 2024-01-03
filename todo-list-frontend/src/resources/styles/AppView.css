@@ -1,0 +1,27 @@
+.app {
+    -fx-padding: 0 5px;
+}
+
+.panel-top {
+    -fx-padding: 30px 0;
+}
+
+.label-title {
+    -fx-font-size: 24px;
+}
+
+.new-task-button {
+    -fx-font-size: 16px;
+    -fx-padding: 3 30px;
+    -fx-background-color: #02a102;
+    -fx-text-fill: #fff;
+}
+
+.new-task-button:hover {
+    -fx-background-color: #008a00;
+    -fx-cursor: hand;
+}
+
+.new-task-button:pressed {
+    -fx-background-color: #007400;
+}

@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.geometry.Insets?>
+<GridPane xmlns="http://javafx.com/javafx"
+          xmlns:fx="http://javafx.com/fxml"
+          fx:controller="controller.NewTaskController"
+          styleClass="new-task" vgap="15" hgap="15">
+
+    <columnConstraints>
+        <ColumnConstraints prefWidth="80" minWidth="80" halignment="RIGHT" />
+        <ColumnConstraints prefWidth="400" maxWidth="Infinity" hgrow="ALWAYS" />
+    </columnConstraints>
+
+    <Label text="Nova Tarefa" styleClass="new-task-title"
+           GridPane.columnIndex="0" GridPane.rowIndex="0"
+           GridPane.columnSpan="2" GridPane.halignment="CENTER" />
+
+    <Label text="Tarefa:" styleClass="new-task-form-label" GridPane.columnIndex="0" GridPane.rowIndex="1" />
+    <TextField fx:id="taskField" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+
+    <Label text="Data Início:" styleClass="new-task-form-label" GridPane.columnIndex="0" GridPane.rowIndex="2" />
+    <DatePicker fx:id="startDateField" GridPane.columnIndex="1" GridPane.rowIndex="2" prefWidth="Infinity" editable="false"/>
+
+    <Label text="Hora:" styleClass="new-task-form-label" GridPane.columnIndex="0" GridPane.rowIndex="3" />
+    <TextField fx:id="timeField" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+
+    <Label text="Prazo Final:" styleClass="new-task-form-label" GridPane.columnIndex="0" GridPane.rowIndex="4" />
+    <DatePicker fx:id="deadlineField" GridPane.columnIndex="1" GridPane.rowIndex="4" prefWidth="Infinity" editable="false" />
+
+    <Button fx:id="cancelButton" text="Cancelar" styleClass="new-task-form-button, cancel-button"
+            onAction="#cancel" GridPane.columnIndex="0" GridPane.rowIndex="5"
+            GridPane.columnSpan="2" GridPane.halignment="CENTER">
+
+        <GridPane.margin>
+            <Insets top="20" />
+        </GridPane.margin>
+    </Button>
+
+    <Button fx:id="saveButton" text="Salvar" styleClass="new-task-form-button, save-button"
+            onAction="#saveNewTask" GridPane.columnIndex="1" GridPane.rowIndex="5"
+            GridPane.columnSpan="2" GridPane.halignment="RIGHT">
+
+        <GridPane.margin>
+            <Insets right="15" top="20" />
+        </GridPane.margin>
+    </Button>
+</GridPane>
